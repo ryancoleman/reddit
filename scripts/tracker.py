@@ -69,8 +69,8 @@ class ApplicationConfig(object):
     """
     def __init__(self):
         self.input = RawConfigParser()
-        with open("production.ini") as f:
-            self.input.readfp(f)
+        with open("production.ini") as infile:
+            self.input.readfp(infile)
         self.output = RawConfigParser()
 
     def get(self, section, key):
